@@ -11,6 +11,12 @@
 - Create action in the correct controller.
 - Create a view file.
 
+### Milestone 2:
+
+- Add RSpec as a gem.
+- Create a Request spec file for controllers
+- Test each action performed.
+
 ## Built With
 - Ruby
 - Ruby on rails
