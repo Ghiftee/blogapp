@@ -33,7 +33,7 @@ To get a local copy up and running:
 
 ## Author
 
-👤 **Uwhubetine Gift**
+👤 **Gift Uwhubetine**
 
 - GitHub: [@Ghiftee](https://github.com/ghiftee)
 - Twitter: [@Ghiftee](https://twitter.com/i_ghiftee)
