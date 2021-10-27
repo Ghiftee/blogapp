@@ -11,6 +11,12 @@
 - Create action in the correct controller.
 - Create a view file.
 
+### Milestone 2:
+
+- Add RSpec as a gem.
+- Create a Request spec file for controllers
+- Test each action performed.
+
 ## Built With
 - Ruby
 - Ruby on rails
@@ -30,6 +36,12 @@ To get a local copy up and running:
     ```bash
     cd blogapp
     ```
+
+## Tests
+- After cloning first run bundle install
+- Then run rails webpacker:install to install webpack dependencies
+- Run bundle install again
+- Finally, run bundle exec rspec to see the tests pass
 
 ## Author
 
