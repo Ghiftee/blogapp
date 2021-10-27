@@ -37,6 +37,9 @@ To get a local copy up and running:
     cd blogapp
     ```
 
+## Tests
+bundle exec rspec
+
 ## Author
 
 👤 **Gift Uwhubetine**
