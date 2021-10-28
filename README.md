@@ -14,8 +14,14 @@
 ### Milestone 2:
 
 - Add RSpec as a gem.
-- Create a Request spec file for controllers
+- Create a Request spec file for controllers.
 - Test each action performed.
+
+### Milestone 3:
+
+- Build project schema.
+- Create and run migration files.
+- Add table and column names based on ERD diagram.
 
 ## Built With
 - Ruby
