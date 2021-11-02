@@ -23,6 +23,12 @@
 - Create and run migration files.
 - Add table and column names based on ERD diagram.
 
+### Milestone 4:
+
+- Create model classes for entities in the ERD.
+- Set up association between models.
+- Make currenty data available to all controllers.
+
 ## Built With
 - Ruby
 - Ruby on rails
