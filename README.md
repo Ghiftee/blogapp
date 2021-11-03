@@ -29,6 +29,12 @@
 - Set up association between models.
 - Make currenty data available to all controllers.
 
+## Milestone 5:
+
+- Use preprocessed HTML file with embedded Ruby code.
+- Use layouts and templates for shared content
+- Implement the design from the sneak peek wireframes.
+
 ## Built With
 - Ruby
 - Ruby on rails
