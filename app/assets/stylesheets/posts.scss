@@ -1,3 +1,70 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.see-posts-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 80px;
+  width: 15%;
+  height: 35px;
+  color: black;
+}
+
+.user-posts {
+  display: flex;
+  flex-direction: column;
+  width: 87%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 80px;
+  border: 2px solid black;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  width: 87%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 80px;
+  border: 2px solid black;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  margin-top: 10px;
+  margin-left: 80px;
+  width: 15%;
+  height: 35px;
+}
+
+.pagination button {
+  border: none;
+  background-color: white;
+  font-size: 15px;
+}
+
+.show-posts {
+  display: flex;
+  flex-direction: column;
+  width: 87%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 80px;
+  border: 2px solid black;
+}
+
+.posts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

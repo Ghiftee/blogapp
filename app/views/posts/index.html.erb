@@ -1,28 +1,28 @@
-<div>
-  <div>
+<section class = 'user-section'>
+  <div class  = 'user-image'>
     <h1><%= @user.photo %></h1>
   </div>
-  <div>
+  <div class = 'user-content'>
     <div>
-      <h4><%= @user.name %></h4>
+      <h2><%= @user.name %></h2>
     </div>
     <div>
-      <p>Number of posts: <%= @user.posts_counter%></p>
+      <p class = 'post-num'>Number of posts: <%= @user.posts_counter%></p>
     </div>
   </div>
-</div>
+</section>
 
 <% @posts.each do |post|%>
-  <div>
+  <div class = 'user-posts'>
     <div>
-      <h4><%= post.id %></h4>
+      <h3>Post <%= post.id %></h3>
     </div>
     <div>
       <p><%= post.text %></p>
       <p> Comments: <%=post.comments_counter %>, Likes: <%= post.likes_counter%></p>
     </div>
   </div>
-  <div>
+  <div class = 'comments'>
     <h4><%= @user.name %>: Comment 1</h4>
     <h4><%= @user.name %>: Comment 2</h4>
     <h4><%= @user.name %>: Comment 3</h4>
@@ -31,6 +31,6 @@
   </div>
 <% end %>
 
-<div>
+<div class = 'pagination'>
   <button type="submit" >Pagination</button>
 </div>

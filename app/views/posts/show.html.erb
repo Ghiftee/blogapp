@@ -1,7 +1,7 @@
-<div>
-  <div>
+<div class = 'show-posts'>
+  <div class = 'posts-header'>
     <div>
-      <h4><%= @post.id %> by <%= @user.name%></h4>
+      <h2>Post <%= @post.id %> by <%= @user.name%></h2>
     </div>
     <div>
       <p> Comments: <%=@post.comments_counter %>, Likes: <%= @post.likes_counter%></p>
@@ -10,7 +10,7 @@
   <p><%= @post.text %></p>
 </div>
 
-<div>
+<div class = 'comments'>
   <h4><%= @user.name %>: Comment 1</h4>
   <h4><%= @user.name %>: Comment 2</h4>
   <h4><%= @user.name %>: Comment 3</h4>
