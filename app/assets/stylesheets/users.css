@@ -1,25 +1,23 @@
 .user-section {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   padding: 10px;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+    justify-content: space-around;
 }
 
 .user-image {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   width: 70px;
   height: 60px;
   border: 2px solid #000;
@@ -27,14 +25,13 @@
 
 .user-content {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   padding: 10px;
   height: 50px;
   width: 70%;
@@ -57,15 +54,15 @@
 
 .user-bio {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   width: 87%;
   padding: 10px;
   margin-left: 80px;
   border: 2px solid black;
 }
+
 /*# sourceMappingURL=users.css.map */

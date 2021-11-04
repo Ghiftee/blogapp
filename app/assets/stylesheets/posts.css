@@ -1,13 +1,12 @@
 .see-posts-button {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   border: 2px solid #000;
   text-decoration: none;
   margin-top: 10px;
@@ -19,12 +18,11 @@
 
 .user-posts {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   width: 87%;
   padding: 10px;
   margin-top: 10px;
@@ -34,12 +32,11 @@
 
 .comments {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   width: 87%;
   padding: 10px;
   margin-top: 10px;
@@ -49,14 +46,13 @@
 
 .pagination {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   border: 2px solid #000;
   margin-top: 10px;
   margin-left: 80px;
@@ -72,12 +68,11 @@
 
 .show-posts {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   width: 87%;
   padding: 10px;
   margin-top: 10px;
@@ -87,14 +82,14 @@
 
 .posts-header {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   width: 100%;
 }
+
 /*# sourceMappingURL=posts.css.map */
