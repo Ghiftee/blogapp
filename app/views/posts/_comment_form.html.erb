@@ -1,8 +1,8 @@
 <div>
-  <%= form_with url: comment_form_path(post.id), scope: :data do |f| %>
+  <%= form_with url: comment_form_path(post.id), scope: :data do |form| %>
     <div>
-      <%= f.text_area :text, size: "60x10", required: true, placeholder: "Write comment...", class: "text_area" %>
+      <%= form.text_area :text, size: "60x10", required: true, placeholder: "Write comment", class: "text_area" %>
     </div>
-    <%= f.submit "Comment", class: "btn" %>
+    <%= form.submit "Comment" %>
   <% end %>
 </div>

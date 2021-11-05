@@ -1,6 +1,6 @@
 <div>
   <% if post.likes.exists?(user_id: current_user.id) %>
-    <p> Liked! </p>
+    <p> Post liked! </p>
   <% else %>
     <%= form_with url: like_form(post.id) do |form| %>
       <%= form.submit "Like" %>
