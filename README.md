@@ -40,6 +40,12 @@
 - Use layouts and templates for shared content
 - Implement the design from the sneak peek wireframes.
 
+## Milestone 6:
+- Create forms to perform the following functions:
+- Creates a Post on behalf of the current_user.
+- Create a comment on behalf of the current_user.
+- Allow Users to add likes to Posts.
+
 ## Built With
 - Ruby
 - Ruby on rails
@@ -68,7 +74,7 @@ To get a local copy up and running:
 - rails s
 
 ## Tests
-- After cloning first run bundle install
+- After cloning run bundle install
 - Then run rails webpacker:install to install webpack dependencies
 - Run bundle install again
 - Finally, run bundle exec rspec to see the tests pass
