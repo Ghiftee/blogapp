@@ -1,3 +1,5 @@
+<%= link_to "Create a new post", user_post_new_path(current_user.id)%>
+
 <section class = 'user-section'>
   <div class = 'user-image'>
     <h1><%= @user.photo %></h1>
@@ -8,7 +10,7 @@
     </div>
 
     <div>
-      <p class = 'post-num'>Number of post: <%= @user.posts_counter%></p>
+      <p class = 'post-num'>Number of posts:<%= @user.posts.size %></p>
     </div>
   </div>
 </section>

@@ -14,18 +14,13 @@
 
 <% @posts.each do |post|%>
   <div class = 'user-posts'>
-    <div>
-      <h3>Post <%= post.id %></h3>
-    </div>
-    <div>
-      <p><%= post.text %></p>
-      <p> Comments: <%=post.comments_counter %>, Likes: <%= post.likes_counter%></p>
-    </div>
-  </div>
-  <div class = 'comments'>
-    <% post.recent_comments.each do |comment| %>
-      <p><%= comment.user.name %>: <%= comment.text %></p> 
+    
+    <%= render partial: "post_details", locals: { post: post } %>
+    
+    <% if post.comments.size > 0 %>
+      <%= render partial: "new_comment", locals: { comments: post.recent_comments } %>
     <% end %>
+
   </div>
 <% end %>
 

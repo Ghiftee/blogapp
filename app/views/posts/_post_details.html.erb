@@ -1,0 +1,8 @@
+<div>
+  <h5><%= post.title %></h5>
+  <p><%= post.text %> </p>
+  <div>
+    <%= render partial: "posts/total_comments", locals: { total_comments: post.comments.size } %>, 
+    <%= render partial: "posts/total_likes", locals: { total_likes: post.likes.size } %>
+  </div>
+</div>
