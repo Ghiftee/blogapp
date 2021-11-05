@@ -91,4 +91,16 @@
   justify-content: space-between;
   width: 100%;
 }
+
+.input {
+  margin-bottom: 10px;
+}
+
+.new-post {
+  text-align: center;
+}
+
+.new-btn {
+  margin-top: 10px;
+}
 /*# sourceMappingURL=posts.css.map */
