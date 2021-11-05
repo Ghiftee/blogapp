@@ -1,1 +1,24 @@
-<h1> Here is the bio of a given user </h1>
+<section class = 'user-section'>
+  <div class = 'user-image'>
+    <h1><%= @user.photo %></h1>
+  </div>
+  <div class = 'user-content'>
+    <div>
+      <h2><%= @user.name %></h2>
+    </div>
+
+    <div>
+      <p class = 'post-num'>Number of post: <%= @user.posts_counter%></p>
+    </div>
+  </div>
+</section>
+
+<% if @user.bio.present? %>
+	<div class = 'user-bio'>
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+<% end %>
+
+<%= render partial: 'posts/post', collection: @post %> 
+<%= link_to "See all post", user_posts_path(@user.id), class: 'see-posts-button' %>

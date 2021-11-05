@@ -1,1 +1,34 @@
-<h1> Here is a list of posts for a given user </h1>
+<section class = 'user-section'>
+  <div class  = 'user-image'>
+    <h1><%= @user.photo %></h1>
+  </div>
+  <div class = 'user-content'>
+    <div>
+      <h2><%= @user.name %></h2>
+    </div>
+    <div>
+      <p class = 'post-num'>Number of posts: <%= @user.posts_counter%></p>
+    </div>
+  </div>
+</section>
+
+<% @posts.each do |post|%>
+  <div class = 'user-posts'>
+    <div>
+      <h3>Post <%= post.id %></h3>
+    </div>
+    <div>
+      <p><%= post.text %></p>
+      <p> Comments: <%=post.comments_counter %>, Likes: <%= post.likes_counter%></p>
+    </div>
+  </div>
+  <div class = 'comments'>
+    <% post.recent_comments.each do |comment| %>
+      <p><%= comment.user.name %>: <%= comment.text %></p> 
+    <% end %>
+  </div>
+<% end %>
+
+<div class = 'pagination'>
+  <button type="submit" >Pagination</button>
+</div>

@@ -3,6 +3,11 @@
 # Blog App
 
 > Blog app is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts
+
+![](screenshots/user.png)
+![](screenshots/user_details.png)
+![](screenshots/post.png)
+![](screenshots/post_details.png)
  
 
 ### Milestone 1:
@@ -29,6 +34,12 @@
 - Set up association between models.
 - Make currenty data available to all controllers.
 
+## Milestone 5:
+
+- Use preprocessed HTML file with embedded Ruby code.
+- Use layouts and templates for shared content
+- Implement the design from the sneak peek wireframes.
+
 ## Built With
 - Ruby
 - Ruby on rails
@@ -48,6 +59,13 @@ To get a local copy up and running:
     ```bash
     cd blogapp
     ```
+
+## Run
+- bundle install
+- rails webpacker:install
+- rails db:migrate
+- rails db:seed
+- rails s
 
 ## Tests
 - After cloning first run bundle install

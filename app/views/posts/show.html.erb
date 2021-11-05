@@ -1,1 +1,18 @@
-<h1> Here is the details of posts for a user </h1>
+<div class = 'show-posts'>
+  <div class = 'posts-header'>
+    <div>
+      <h2>Post <%= @post.id %> by <%= @user.name%></h2>
+    </div>
+    <div>
+      <p> Comments: <%=@post.comments_counter %>, Likes: <%= @post.likes_counter%></p>
+    </div>
+  </div>
+  <p><%= @post.text %></p>
+</div>
+
+<div class = 'comments'>
+  <% @post.recent_comments.each do |comment| %>
+    <p><%= comment.user.name %>: <%= comment.text %></p> 
+  <% end %>
+</div>
+

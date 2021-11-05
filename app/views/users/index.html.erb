@@ -1,1 +1,17 @@
-<h1> Here is a list of users and their number of posts </h1>
+<% @users.each do |user| %>
+  <article class = 'user-section'>
+    <div class  = 'user-image'>
+      <h1><%= user.photo %></h1>
+    </div>
+
+    <div class = 'user-content'>
+      <div>
+        <h2><%= link_to user.name, user_path(user), class: 'user-name'%></h2>
+      </div>
+
+      <div>
+        <p class = 'post-num'>Number of posts: <%= user.posts_counter %></p>
+      </div>
+    </div>
+  </article>
+<% end %>
