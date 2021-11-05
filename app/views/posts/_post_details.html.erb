@@ -1,5 +1,5 @@
 <div>
-  <h5><%= post.title %></h5>
+  <h3>Post #<%= post.id %> - <%= post.title %></h3>
   <p><%= post.text %> </p>
   <div>
     <%= render partial: "posts/total_comments", locals: { total_comments: post.comments.size } %>, 

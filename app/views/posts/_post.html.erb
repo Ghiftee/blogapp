@@ -4,6 +4,8 @@
   </div>
   <div>
     <p><%= post.text %></p>
-    <p> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter%></p>
+    <p> <%= render partial: "posts/total_comments", locals: { total_comments: post.comments.size }%>, 
+      <%= render partial: "posts/total_likes", locals: { total_likes: post.likes.size } %>
+    </p>
   </div>
 </div>
