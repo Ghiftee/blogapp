@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
+  let(:user) { User.create(name: 'Cross', photo: 'CR', bio: 'My bio', posts_counter: 3) }
   describe 'GET #index' do
-    before(:each) do
+    before do
       get users_path
     end
 
@@ -13,15 +14,11 @@ RSpec.describe 'Users', type: :request do
     it 'displays the correct template' do
       expect(response).to render_template(:index)
     end
-
-    it 'has the correct placeholder text' do
-      expect(response.body).to include('Here is a list of users and their number of posts')
-    end
   end
 
   describe 'GET #show' do
-    before(:each) do
-      get user_path(745)
+    before do
+      get user_path(user)
     end
 
     it 'should have the correct response status' do
@@ -30,10 +27,6 @@ RSpec.describe 'Users', type: :request do
 
     it 'displays the correct template' do
       expect(response).to render_template(:show)
-    end
-
-    it 'displays the correct placeholder text' do
-      expect(response.body).to include('Here is the bio of a given user')
     end
   end
 end
