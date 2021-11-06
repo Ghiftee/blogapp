@@ -69,7 +69,7 @@ To get a local copy up and running:
 ## Run
 - bundle install
 - rails webpacker:install
-- rails db:migrate
+- rails db:schema:load
 - rails db:seed
 - rails s
 
