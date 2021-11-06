@@ -14,7 +14,6 @@ RSpec.describe 'Posts', type: :request do
     it 'displays the correct template' do
       expect(response).to render_template(:index)
     end
-
   end
 
   describe 'GET #show' do
