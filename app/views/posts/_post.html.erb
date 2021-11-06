@@ -1,6 +1,6 @@
 <div class = 'user-posts'>
   <div>
-    <h3>Post #<%= post.id %> - <%= post.title %></h3>
+    <h3><%= link_to  "Post ##{post.id} - #{post.title}" , user_post_path(post.id), class: 'link-comments'%></h3> 
   </div>
   <div>
     <p><%= post.text %></p>
