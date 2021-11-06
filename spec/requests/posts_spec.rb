@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
+  let(:user) { User.create(name: 'Cross', photo: 'CR', bio: 'My bio', posts_counter: 3) }
+  let(:post) { user.posts.create(title: 'Post', text: 'New post', comments_counter: 2, likes_counter: 4) }
+
   describe 'GET #index' do
-    before(:each) do
-      get user_posts_path(745)
-    end
+    before { get user_posts_path(post.user_id) }
 
     it 'should have the correct response status' do
       expect(response).to have_http_status(:ok)
@@ -14,14 +15,11 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template(:index)
     end
 
-    it 'has the correct placeholder text' do
-      expect(response.body).to include('Here is a list of posts for a given user')
-    end
   end
 
   describe 'GET #show' do
-    before(:each) do
-      get user_post_path(745, 3)
+    before do
+      get user_post_path(user_id: user.id, id: post.id)
     end
 
     it 'should have the correct response status' do
@@ -32,8 +30,5 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template(:show)
     end
 
-    it 'displays the correct placeholder text' do
-      expect(response.body).to include('Here is the details of posts for a user')
-    end
   end
 end
