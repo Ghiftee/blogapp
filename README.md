@@ -46,6 +46,12 @@
 - Create a comment on behalf of the current_user.
 - Allow Users to add likes to Posts.
 
+## Milestone 7:
+- Add validations for user and post models.
+- Add unit specs for all models' methods and validations.
+- Add flash messages in the create actions in controllers.
+- Make sure that the N+1 problem is solved when fetching all posts and their comments for a user.
+
 ## Built With
 - Ruby
 - Ruby on rails
