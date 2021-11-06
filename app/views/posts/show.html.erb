@@ -4,15 +4,22 @@
       <h2>Post <%= @post.id %> by <%= @user.name%></h2>
     </div>
     <div>
-      <p> Comments: <%=@post.comments_counter %>, Likes: <%= @post.likes_counter%></p>
+      <%= render partial: "posts/total_comments", locals: { total_comments: @post.comments.size } %>, 
+      <%= render partial: "posts/total_likes", locals: { total_likes: @post.likes.size } %>
     </div>
   </div>
+  <%= render partial: "like_form", locals: { post: @post } %>
   <p><%= @post.text %></p>
 </div>
 
 <div class = 'comments'>
-  <% @post.recent_comments.each do |comment| %>
-    <p><%= comment.user.name %>: <%= comment.text %></p> 
+  <% if @post.comments.size > 0 %>
+    <%= render partial: "new_comment", locals: { comments: @post.comments } %>
   <% end %>
+</div>
+
+<div class = "new-post">
+  <h3> Add a comment </h3>
+  <%= render partial: "comment_form", locals: { post: @post } %>
 </div>
 

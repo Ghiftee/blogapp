@@ -1,0 +1,14 @@
+<div class = "new-post">
+  <%= form_with url: create_new_post_path, model: @post do |form| %>
+    <h2>Create a post</h2>
+    <div>
+      <%= form.text_field :title, class: "input", size: "50x10", required: true, placeholder: "Post title", value: nil %>
+    </div>
+    <div>
+      <%= form.text_area :text, size: "70x30", required: true, placeholder: "Post content", value: nil %>
+    </div>
+    <div class = "new-btn">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

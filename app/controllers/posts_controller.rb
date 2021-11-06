@@ -5,8 +5,29 @@ class PostsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:id])
+    @user = User.find(params[:id])
+    @post = @user.posts.find(params[:user_id])
     @comments = @post.comments.all
+  end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    new_post = current_user.posts.new post_params
+    current_user.posts << new_post
+
+    if new_post.save
+      redirect_to user_posts_path(new_post.user.id), notice: 'Post successfully created!'
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
