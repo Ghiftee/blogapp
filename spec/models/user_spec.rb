@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Cross', photo: 'CR', bio: 'My bio', posts_counter: 3) }
+  subject { User.create(name: 'Cross', photo: 'CR', bio: 'My bio', posts_counter: 3) }
 
   before { subject.save }
 
@@ -24,5 +24,4 @@ RSpec.describe User, type: :model do
       expect(subject.recent_posts.length).to be(3)
     end
   end
-
 end

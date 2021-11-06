@@ -14,7 +14,6 @@ RSpec.describe 'Users', type: :request do
     it 'displays the correct template' do
       expect(response).to render_template(:index)
     end
-
   end
 
   describe 'GET #show' do
@@ -29,6 +28,5 @@ RSpec.describe 'Users', type: :request do
     it 'displays the correct template' do
       expect(response).to render_template(:show)
     end
-
   end
 end
