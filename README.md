@@ -52,6 +52,12 @@
 - Add flash messages in the create actions in controllers.
 - Make sure that the N+1 problem is solved when fetching all posts and their comments for a user.
 
+## Milestone 8:
+- Install and setup devise.
+- Add functionality to register users.
+- Allow users to login with email and password.
+- Add functionality to confirm email and reset password.
+
 ## Built With
 - Ruby
 - Ruby on rails
@@ -92,6 +98,12 @@ To get a local copy up and running:
 - GitHub: [@Ghiftee](https://github.com/ghiftee)
 - Twitter: [@Ghiftee](https://twitter.com/i_ghiftee)
 - LinkedIn: [Ghiftee](https://linkedin.com/in/giftuwhubetine)
+
+👤 **Akasha Rojee**
+
+- GitHub: [@Ghiftee](https://github.com/AkashaRojee)
+- Twitter: [@Ghiftee](https://twitter.com/AkashaRojee)
+- LinkedIn: [Ghiftee](https://linkedin.com/in/AkashaRojee)
 
 ## 🤝 Contributing
 
