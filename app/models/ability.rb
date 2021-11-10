@@ -10,7 +10,7 @@ class Ability
         can :manage, :all
       else
         can [:read, :create], :all
-        can []:update, :destroy], Post, user: user
+        can [:update, :destroy], Post, user: user
         can :destroy, Comment, user: user
       end
     end
