@@ -7,8 +7,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @post = @user.posts.includes(:comments).find(params[:user_id])
+    @user = User.find(params[:user_id])
+    @post = @user.posts.includes(:comments).find(params[:id])
     @comments = @post.comments.all
   end
 
