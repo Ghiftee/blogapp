@@ -1,5 +1,5 @@
 <div class = 'align-body'>
-  <h2 class = 'sign-up-button'>Sign up</h2>
+  <h2 class = 'sign-up'>Sign up</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="actions margin">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up" , class: 'sign-in-button'%>
     </div>
   <% end %>
 

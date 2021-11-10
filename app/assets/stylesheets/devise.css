@@ -17,6 +17,13 @@
   color: blue;
 }
 
-.sign-up-button {
+.sign-up {
   font-size: 30px;
+}
+
+.sign-in-button {
+  border: 1px solid black;
+  text-align: center;
+  width: 53%;
+  background-color: white;
 }
