@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
       redirect_to user_post_path(post.user.id, post.id), alert: 'Failed to delete comment!'
     end
   end
-  
+
   private
 
   def comment_params
