@@ -1,5 +1,5 @@
 <div>
-  <h3>Post #<%= post.id %> - <%= post.title %></h3>
+    <h3><%= link_to "Post ##{post.id} - #{post.title}" , user_post_path(@user.id, post.id), class: 'link-comments'%></h3> 
   <p><%= post.text %> </p>
   <div>
     <%= render partial: "posts/total_comments", locals: { total_comments: post.comments.size } %>, 

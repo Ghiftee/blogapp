@@ -4,12 +4,14 @@ Rails.application.routes.draw do
 
   root 'users#index'
 
-  post 'users/:id/like/create', to: 'likes#create', as: 'like_form'
-  post 'users/:id/comment/create', to: 'comments#create', as: 'comment_form'
-  get 'users/:user_id/post/new', to: 'posts#new', as: 'user_post_new'
-  post 'users/:user_id/post', to: 'posts#create', as: 'create_new_post'
-
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show] 
   end
+
+  resources :posts, only: [:new, :create, :destroy] do
+    resources :comments, only: [:create]
+    resources :likes, only: [:create]
+  end
+
+  resources :comments, only: [:destroy]
 end
