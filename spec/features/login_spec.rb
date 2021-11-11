@@ -26,5 +26,15 @@ RSpec.feature 'Login page', type: :feature do
     expect(page).to have_content 'Invalid Email or password'
   end
   
+  scenario 'When I click the submit button after filling in the username and the password with correct data, I am redirected to the root page.' do
+    user = FactoryBot.create :user
+    within 'form' do
+      fill_in 'user_email', with: user.email
+      fill_in 'user_password', with: user.password
+    end
+    click_button 'Log in'
+    expect(page).to have_content 'Signed in successfully'
+  end
+
 
 end
