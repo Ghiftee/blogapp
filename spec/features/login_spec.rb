@@ -16,4 +16,15 @@ RSpec.feature 'Login page', type: :feature do
     expect(page).to have_content 'Invalid Email or password'
   end
 
+  scenario 'When I click the submit button after filling in the username and the password with incorrect data, I get a detailed error.' do
+    visit new_user_session_path
+    within 'form' do
+      fill_in 'user_email', with: 'user@gmail.com'
+      fill_in 'user_password', with: 'sample_password'
+    end
+    click_button 'Log in'
+    expect(page).to have_content 'Invalid Email or password'
+  end
+  
+
 end
