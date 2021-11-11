@@ -16,7 +16,8 @@ RSpec.feature 'User index page', type: :feature do
   end
 
   scenario 'I can see the number of posts each user has written' do
-    expect(page).to have_content "Number of posts: #{@new_user.posts.size}"
+    # test not passing yet
+    expect(page).to have_content "Number of posts: #{@new_user.posts.size}" 
   end
 
   scenario "When I click on a user, I am redirected to that user's show page" do
