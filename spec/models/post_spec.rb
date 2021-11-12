@@ -1,11 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:user) { User.create(name: 'Cross', photo: 'CR', bio: 'My bio', posts_counter: 3) }
-  let(:post) do
-    described_class.create(user: user, title: 'My first post', text: 'Text to post', comments_counter: 0,
-                           likes_counter: 0)
-  end
+  subject { FactoryBot.build :post }
+  
   describe 'validations' do
     describe 'title' do
       context 'when valid' do
