@@ -38,6 +38,4 @@ RSpec.feature 'Post show page', type: :feature do
       expect(page).to have_content comment.text
     end
   end
-
-
 end
