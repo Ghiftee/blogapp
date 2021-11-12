@@ -25,6 +25,7 @@ RSpec.feature 'Login page', type: :feature do
   end
 
   scenario 'Clicking the submit button after filling in correct data, redirects to the root page.' do
+    visit new_user_session_path
     user = FactoryBot.create :user
     within 'form' do
       fill_in 'user_email', with: user.email
