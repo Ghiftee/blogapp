@@ -2,8 +2,12 @@ class PostsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.recent_posts
+    if params[:user_id].present?
+      @user = User.find params[:user_id]
+      @posts = @user.recent_posts
+    else
+      render json: { status: 'success', data: { posts: Post.all.order('created_at') } }
+    end
   end
 
   def show
