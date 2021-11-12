@@ -23,4 +23,21 @@ RSpec.feature 'Post show page', type: :feature do
     expect(page).to have_content 'Likes: 0'
   end
 
+  scenario 'I can see the post body.' do
+    expect(page).to have_content @post.text
+  end
+
+  scenario 'I can see the username of each commentor.' do
+    @post.comments.each do |comment|
+      expect(page).to have_content comment.user.name
+    end
+  end
+
+  scenario 'I can see the comment each commentor left' do
+    @post.comments.each do |comment|
+      expect(page).to have_content comment.text
+    end
+  end
+
+
 end
