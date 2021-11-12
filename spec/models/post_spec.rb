@@ -6,7 +6,7 @@ RSpec.describe Post, type: :model do
   describe 'validations' do
     describe 'title' do
       context 'when valid' do
-        it { expect(post).to be_valid }
+        it { expect(subject).to be_valid }
       end
 
       context 'when not valid' do
@@ -23,19 +23,15 @@ RSpec.describe Post, type: :model do
     end
 
     describe 'comments_counter' do
+      subject { FactoryBot.create :post_with_comments, comments_counter: 5 }
+
       it 'should allow valid values' do
         subject.comments_counter = 0.23
         expect(subject).to_not be_valid
       end
 
-      it 'should allow valid values' do
-        subject.comments_counter = 0
-        expect(subject).to_not be_valid
-      end
-
-      it 'should allow valid values' do
-        subject.comments_counter = -2
-        expect(subject).to_not be_valid
+      it 'should return 5 comments' do
+        expect(subject.recent_comments.length).to be(5)
       end
     end
   end

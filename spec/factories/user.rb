@@ -4,7 +4,7 @@ FactoryBot.define do
   end
 
   sequence :name do |n|
-    "User Number#{n}"
+    "User #{n}"
   end
 
   factory :user do

@@ -1,11 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  let(:user) { User.create(name: 'Cross', photo: 'CR', bio: 'My bio', posts_counter: 3) }
-  let(:post) { user.posts.create(title: 'Post', text: 'New post', comments_counter: 2, likes_counter: 4) }
-
+  login_user
+  
   describe 'GET #index' do
-    before { get user_posts_path(post.user_id) }
+    before { get user_posts_path(@user.id) }
 
     it 'should have the correct response status' do
       expect(response).to have_http_status(:ok)
@@ -17,8 +16,9 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'GET #show' do
-    before do
-      get user_post_path(user_id: user.id, id: post.id)
+    before(:example) do
+      post = FactoryBot.create :post, user: @user
+      get user_post_path(@user.id, post.id)
     end
 
     it 'should have the correct response status' do
