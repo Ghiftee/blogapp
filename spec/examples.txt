@@ -29,7 +29,7 @@ example_id                                          | status | run_time        |
 ./spec/features/user_show_spec.rb[1:7]              | passed | 0.06797 seconds |
 ./spec/features/user_show_spec.rb[1:8]              | passed | 0.08472 seconds |
 ./spec/models/comment_spec.rb[1:1:1]                | failed | 0.06465 seconds |
-./spec/models/like_spec.rb[1:1:1]                   | failed | 0.03973 seconds |
+./spec/models/like_spec.rb[1:1:1]                   | failed | 0.06252 seconds |
 ./spec/models/post_spec.rb[1:1:1:1:1]               | passed | 0.00223 seconds |
 ./spec/models/post_spec.rb[1:1:1:2:1]               | passed | 0.00094 seconds |
 ./spec/models/post_spec.rb[1:1:1:2:2]               | passed | 0.00086 seconds |
