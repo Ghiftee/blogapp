@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   login_user
-  
+
   describe 'GET #index' do
     before { get user_posts_path(@user.id) }
 

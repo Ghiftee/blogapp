@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   subject { FactoryBot.build :post }
-  
+
   describe 'validations' do
     describe 'title' do
       context 'when valid' do

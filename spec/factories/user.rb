@@ -18,12 +18,12 @@ FactoryBot.define do
     factory :admin do
       role { 'admin' }
     end
-  
+
     factory :user_with_posts do
       transient do
         posts_counter { 3 }
       end
-  
+
       posts do
         Array.new(posts_counter) { association(:post) }
       end

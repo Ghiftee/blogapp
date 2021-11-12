@@ -12,7 +12,6 @@ FactoryBot.define do
       comments do
         Array.new(comments_counter) { association(:comment) }
       end
-
     end
   end
 end
