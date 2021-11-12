@@ -11,5 +11,8 @@ RSpec.feature 'Post show page', type: :feature do
     expect(page).to have_content @post.title
   end
 
+  scenario 'I can see who wrote the post' do
+    expect(page).to have_content @user.name
+  end
 
 end
