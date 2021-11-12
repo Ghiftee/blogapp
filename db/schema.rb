@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2021_11_12_200326) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "photo", default: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fvectors%2Ftable-furniture-wooden-1300555%2F&psig=AOvVaw3theIKVGmB8Bhk-5pQMxEK&ust=1635523566809000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJCqjZi-7fMCFQAAAAAdAAAAABAI"
+    t.string "photo"
     t.text "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
