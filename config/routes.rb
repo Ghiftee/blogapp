@@ -15,5 +15,8 @@ Rails.application.routes.draw do
 
   resources :comments, only: [:destroy]
 
-  resources :posts, only: [:index]
+  namespace :api do
+    resources :posts, only: [:index] do
+    end
+  end
 end
