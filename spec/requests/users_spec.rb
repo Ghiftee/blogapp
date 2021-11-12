@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-  let(:user) { User.create(name: 'Cross', photo: 'CR', bio: 'My bio', posts_counter: 3) }
+  login_user
   describe 'GET #index' do
     before do
       get users_path
@@ -18,7 +18,7 @@ RSpec.describe 'Users', type: :request do
 
   describe 'GET #show' do
     before do
-      get user_path(user)
+      get user_path(@user.id)
     end
 
     it 'should have the correct response status' do
