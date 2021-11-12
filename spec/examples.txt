@@ -32,7 +32,7 @@ example_id                              | status | run_time        |
 ./spec/requests/posts_spec.rb[1:1:2]    | passed | 0.03074 seconds |
 ./spec/requests/posts_spec.rb[1:2:1]    | passed | 0.11068 seconds |
 ./spec/requests/posts_spec.rb[1:2:2]    | passed | 0.02796 seconds |
-./spec/requests/users_spec.rb[1:1:1]    | failed | 0.01152 seconds |
-./spec/requests/users_spec.rb[1:1:2]    | failed | 0.01036 seconds |
-./spec/requests/users_spec.rb[1:2:1]    | failed | 0.00304 seconds |
-./spec/requests/users_spec.rb[1:2:2]    | failed | 0.00141 seconds |
+./spec/requests/users_spec.rb[1:1:1]    | passed | 0.02801 seconds |
+./spec/requests/users_spec.rb[1:1:2]    | passed | 0.21424 seconds |
+./spec/requests/users_spec.rb[1:2:1]    | passed | 0.04524 seconds |
+./spec/requests/users_spec.rb[1:2:2]    | passed | 0.0237 seconds  |
