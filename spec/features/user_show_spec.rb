@@ -16,7 +16,6 @@ RSpec.feature 'User index page', type: :feature do
   end
 
   scenario 'I can see the number of posts each user has written' do
-    # test not passing yet
     expect(page).to have_content "Number of posts:#{@user.posts.size}"
   end
 
