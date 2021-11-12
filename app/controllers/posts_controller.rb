@@ -1,15 +1,10 @@
-class PostsController < ApplicationController::API
+class PostsController < ApplicationController
   load_and_authorize_resource
+  skip_authorize_resource only: :all_posts
 
   def index
-    # if params[:user_id].present?
-    #   @user = User.find params[:user_id]
-    #   @posts = @user.recent_posts
-    # else
-    #   render json: { status: 'success', data: { posts: Post.all.order('created_at') } }
-    # end
-    @posts = Post.all.order('created_at')
-    render json: { status: 'success', data: { posts: @posts } }
+    @user = User.find params[:user_id]
+    @posts = @user.posts.order(created_at: :desc)
   end
 
   def show
