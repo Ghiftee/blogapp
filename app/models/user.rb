@@ -7,8 +7,8 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  # validates :name, presence: { message: 'Name must not be blank' }
-  # validates_numericality_of :posts_counter, only_integer: true, greater_than_or_equal: 0
+  validates :name, presence: { message: 'Name must not be blank' }
+  validates_numericality_of :posts_counter, only_integer: true, greater_than_or_equal: 0
 
   def admin?
     role == 'admin'
