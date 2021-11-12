@@ -17,7 +17,7 @@ RSpec.feature 'User post index page', type: :feature do
 
   scenario 'I can see the number of posts the user has written' do
     # test not passing yet
-    expect(page).to have_content "Number of posts: #{@user.posts.size}"
+    expect(page).to have_content "Number of posts:#{@user.posts.size}"
   end
 
   scenario "I can see a post's title" do
@@ -33,10 +33,10 @@ RSpec.feature 'User post index page', type: :feature do
   end
 
   scenario 'I can see how many comments a post has' do
-    expect(page).to have_content "Comments: #{@user.posts.comments.size}"
+    expect(page).to have_content "Comments: #{@user.posts[0].comments.size}"
   end
 
   scenario 'I can see how many likes a post has' do
-    expect(page).to have_content "Likes: #{@user.posts.likes.size}"
+    expect(page).to have_content "Likes: #{@user.posts[0].likes.size}"
   end
 end
